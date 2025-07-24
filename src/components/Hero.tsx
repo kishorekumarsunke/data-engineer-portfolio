@@ -19,14 +19,13 @@ const Hero = () => {
           {/* Name and Title */}
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-bold text-slate-800 dark:text-white">
-              Your Name
+              Kishore Kumar,Sunke
             </h1>
             <h2 className="text-2xl md:text-3xl text-blue-600 dark:text-blue-400 font-semibold">
               Data Engineer
             </h2>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Passionate about building robust data pipelines, optimizing data workflows, 
-              and turning raw data into actionable insights using modern cloud technologies.
+              Experienced Data Engineering professional proficient in Azure data technologies and ETL processes. Skilled in SQL, PySpark, and Azure Data Factory. Committed to ensuring data quality and governance while delivering tailored solutions to meet business needs. Currently pursuing an MSc in Computer Science from UT Arlington. Let's connect to explore how we can drive data-driven innovation together.
             </p>
           </div>
 
@@ -41,7 +40,7 @@ const Hero = () => {
               <Github className="w-6 h-6 text-slate-700 dark:text-slate-300" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/sunke-kishore-kumar/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
@@ -49,7 +48,7 @@ const Hero = () => {
               <Linkedin className="w-6 h-6 text-blue-600" />
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:kxs0089@mavs.uta.edu"
               className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
             >
               <Mail className="w-6 h-6 text-green-600" />
