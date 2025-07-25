@@ -215,15 +215,29 @@ const Projects = () => {
         </div>
 
         {/* Additional Projects Link */}
-        <div className="text-center mt-12">
+        <div className={`text-center mt-12 transform transition-all duration-1000 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <a
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-110 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/25 group relative overflow-hidden"
           >
-            <Github className="w-5 h-5 mr-2" />
-            View All Projects on GitHub
+            {/* Animated background overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            {/* Shimmer effect */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
+            </div>
+            
+            {/* Content */}
+            <div className="relative z-10 flex items-center">
+              <Github className="w-5 h-5 mr-2 transform group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
+              <span className="group-hover:text-white transition-colors duration-300">View All Projects on GitHub</span>
+            </div>
+            
+            {/* Pulsing border */}
+            <div className="absolute inset-0 rounded-lg border-2 border-transparent group-hover:border-white/30 group-hover:animate-pulse transition-all duration-300"></div>
           </a>
         </div>
       </div>
