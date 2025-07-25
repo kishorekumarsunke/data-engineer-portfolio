@@ -1,6 +1,7 @@
 'use client'
 
 import { ExternalLink, Github, Database, Cloud, Zap } from 'lucide-react'
+import { ShoppingCart, HeartPulse, Gamepad, BookOpen, TrendingUp } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 const Projects = () => {
@@ -22,98 +23,98 @@ const Projects = () => {
     return () => observer.disconnect()
   }, [])
 
-  const projects = [
-    {
-      title: "Real-time Analytics Pipeline",
-      description: "Built a scalable real-time data pipeline using Apache Kafka, Spark Streaming, and AWS services to process 1M+ events per second for e-commerce analytics.",
-      technologies: ["Apache Kafka", "Spark Streaming", "AWS Kinesis", "ElasticSearch", "Python"],
-      features: [
-        "Real-time event processing",
-        "Auto-scaling infrastructure",
-        "Data quality monitoring",
-        "Custom alerting system"
-      ],
-      icon: <Zap className="w-6 h-6" />,
-      githubUrl: "https://github.com",
-      liveUrl: "https://demo.com",
-      image: "/api/placeholder/400/250"
-    },
-    {
-      title: "Modern Data Warehouse",
-      description: "Designed and implemented a cloud-native data warehouse using Snowflake, dbt, and Airflow for a financial services company.",
-      technologies: ["Snowflake", "dbt", "Apache Airflow", "Python", "SQL"],
-      features: [
-        "Dimensional data modeling",
-        "Automated data quality tests",
-        "Incremental data loading",
-        "Performance optimization"
-      ],
-      icon: <Database className="w-6 h-6" />,
-      githubUrl: "https://github.com",
-      liveUrl: "https://demo.com",
-      image: "/api/placeholder/400/250"
-    },
-    {
-      title: "Multi-Cloud Data Lake",
-      description: "Architected a multi-cloud data lake solution using Terraform, Delta Lake, and Apache Spark for data science and ML workloads.",
-      technologies: ["Delta Lake", "Apache Spark", "Terraform", "AWS S3", "Azure Data Lake"],
-      features: [
-        "ACID transactions on data lake",
-        "Schema evolution support",
-        "Time travel capabilities",
-        "Cross-cloud data synchronization"
-      ],
-      icon: <Cloud className="w-6 h-6" />,
-      githubUrl: "https://github.com",
-      liveUrl: "https://demo.com",
-      image: "/api/placeholder/400/250"
-    },
-    {
-      title: "Data Quality Framework",
-      description: "Developed a comprehensive data quality framework with automated testing, monitoring, and alerting for enterprise data pipelines.",
-      technologies: ["Great Expectations", "Apache Airflow", "PostgreSQL", "Grafana", "Python"],
-      features: [
-        "Automated data profiling",
-        "Custom quality rules",
-        "Real-time monitoring",
-        "Detailed reporting dashboard"
-      ],
-      icon: <Database className="w-6 h-6" />,
-      githubUrl: "https://github.com",
-      liveUrl: "https://demo.com",
-      image: "/api/placeholder/400/250"
-    },
-    {
-      title: "Streaming ETL Platform",
-      description: "Built a low-latency streaming ETL platform using Apache Flink and Kubernetes for processing IoT sensor data.",
-      technologies: ["Apache Flink", "Kubernetes", "Apache Kafka", "InfluxDB", "Scala"],
-      features: [
-        "Sub-second latency processing",
-        "Exactly-once semantics",
-        "Auto-scaling based on load",
-        "Complex event processing"
-      ],
-      icon: <Zap className="w-6 h-6" />,
-      githubUrl: "https://github.com",
-      liveUrl: "https://demo.com",
-      image: "/api/placeholder/400/250"
-    },
-    {
-      title: "ML Feature Store",
-      description: "Implemented a feature store using Feast and Redis for managing and serving ML features across multiple data science teams.",
-      technologies: ["Feast", "Redis", "Apache Spark", "MLflow", "Python"],
-      features: [
-        "Online and offline feature serving",
-        "Feature versioning and lineage",
-        "Point-in-time correctness",
-        "Feature monitoring and drift detection"
-      ],
-      icon: <Database className="w-6 h-6" />,
-      githubUrl: "https://github.com",
-      liveUrl: "https://demo.com",
-      image: "/api/placeholder/400/250"
-    }
-  ]
+const projects = [
+  {
+    title: "Taste Traverse",
+    description: "An online food ordering and dining platform with real-time order tracking and dynamic restaurant listings.",
+    technologies: ["React", "Node.js", "MongoDB", "Azure Functions", "SignalR"],
+    features: [
+      "User authentication with Clerk",
+      "Dynamic restaurant and menu listings",
+      "Real‑time order status updates",
+      "Responsive design"
+    ],
+    icon: <ShoppingCart className="w-6 h-6" />,
+    githubUrl: "https://github.com/yourusername/taste-traverse",
+    liveUrl: "https://taste-traverse.example.com",
+    image: "/api/placeholder/400/250"
+  },
+  {
+    title: "Wellness Wave",
+    description: "A mental wellness companion app offering AI‑driven journaling prompts and secure data storage.",
+    technologies: ["React Native", "Firebase", "Groq", "GitHub Actions", "Expo"],
+    features: [
+      "Personalized AI journaling prompts",
+      "Secure Firestore data storage",
+      "CI/CD pipeline with GitHub Actions",
+      "Cross‑platform support"
+    ],
+    icon: <HeartPulse className="w-6 h-6" />,
+    githubUrl: "https://github.com/yourusername/wellness-wave",
+    liveUrl: "https://wellness-wave.example.com",
+    image: "/api/placeholder/400/250"
+  },
+  {
+    title: "End-to-End Azure Data Engineering Pipeline",
+    description: "Comprehensive data engineering solution on Azure for healthcare analytics with ETL, storage, and dashboards.",
+    technologies: ["Azure Data Factory", "Data Lake Storage Gen2", "Databricks", "Synapse Analytics", "Power BI"],
+    features: [
+      "Orchestrated ETL workflows",
+      "Scalable data lake storage",
+      "Data transformation and enrichment",
+      "Interactive Power BI dashboards"
+    ],
+    icon: <Database className="w-6 h-6" />,
+    githubUrl: "https://github.com/yourusername/azure-data-pipeline",
+    liveUrl: "https://azure-pipeline.example.com",
+    image: "/api/placeholder/400/250"
+  },
+  {
+    title: "Back to Home - Campus Quest",
+    description: "A 2D educational game guiding kids through a campus map with path tracking and step counter.",
+    technologies: ["JavaScript", "HTML5 Canvas", "CSS", "ES6"],
+    features: [
+      "Animated movement controls",
+      "Path visualization",
+      "Step counting tracker",
+      "Randomized start location"
+    ],
+    icon: <Gamepad className="w-6 h-6" />,
+    githubUrl: "https://github.com/yourusername/campus-quest",
+    liveUrl: "https://campus-quest.example.com",
+    image: "/api/placeholder/400/250"
+  },
+  {
+    title: "EdTech Resource Portal",
+    description: "MERN‑stack platform to digitize course materials with role‑based authentication and secure APIs.",
+    technologies: ["MongoDB", "Express.js", "React", "Node.js", "RESTful APIs"],
+    features: [
+      "Role‑based user authentication",
+      "Secure content delivery",
+      "Responsive React interface",
+      "Reduced paper usage by 60%"
+    ],
+    icon: <BookOpen className="w-6 h-6" />,
+    githubUrl: "https://github.com/yourusername/edtech-portal",
+    liveUrl: "https://edtech-portal.example.com",
+    image: "/api/placeholder/400/250"
+  },
+  {
+    title: "ML‑Powered Sentiment Analysis Tool",
+    description: "End‑to‑end ML pipeline for social media sentiment analysis with transformer models and dashboards.",
+    technologies: ["Python", "NLTK", "Transformers", "FastAPI", "Power BI"],
+    features: [
+      "Text preprocessing and tokenization",
+      "Fine‑tuned transformer inference",
+      "Azure App Service deployment",
+      "Sentiment trend dashboards"
+    ],
+    icon: <TrendingUp className="w-6 h-6" />,
+    githubUrl: "https://github.com/yourusername/sentiment-tool",
+    liveUrl: "https://sentiment-tool.example.com",
+    image: "/api/placeholder/400/250"
+  }
+]
 
   return (
     <section id="projects" className="py-20 bg-slate-900">

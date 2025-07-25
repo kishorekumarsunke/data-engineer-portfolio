@@ -45,10 +45,10 @@ const Hero = () => {
               <span className="inline-block hover:text-blue-400 transition-colors duration-300 delay-200">,Sunke</span>
             </h1>
             <h2 className={`text-xl md:text-2xl text-blue-400 font-semibold transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <span className="inline-block animate-pulse">💾</span> Data Engineer <span className="inline-block animate-pulse delay-500">🚀</span>
+              <span className="inline-block animate-pulse">🚀</span> Big Data Engineer <span className="inline-block animate-pulse delay-500">🚀</span>
             </h2>
             <p className={`text-base md:text-lg text-slate-300 max-w-2xl mx-auto transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              Experienced Data Engineering professional proficient in Azure data technologies and ETL processes. Skilled in SQL, PySpark, and Azure Data Factory. Currently pursuing an MSc in Computer Science from UT Arlington.
+              A passionate and motivated Software Developer with extensive experience in data engineering, web, and mobile app development. I specialize in creating scalable, responsive, and efficient solutions leveraging modern technologies and frameworks
             </p>
           </div>
 

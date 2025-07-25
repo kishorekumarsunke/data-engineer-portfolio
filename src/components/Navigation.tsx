@@ -32,8 +32,9 @@ const Navigation = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
             <h1 className="text-xl font-bold text-white">
-              Data Engineer
+              Kishore Kumar Sunke
             </h1>
+            <p className="text-slate-400">Student Assistant, Computer Science Master's Candidate at UT Arlington | Ex- Accenture</p>
           </div>
           
           {/* Desktop Navigation */}
