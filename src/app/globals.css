@@ -4,27 +4,146 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Dark theme variables */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
+  --primary: #3b82f6;
+  --primary-foreground: #f8fafc;
+  --secondary: #475569;
+  --secondary-foreground: #f1f5f9;
+  --muted: #334155;
+  --muted-foreground: #cbd5e1;
+  --accent: #1e40af;
+  --accent-foreground: #f8fafc;
+  --border: #334155;
+  --input: #1e293b;
+  --ring: #3b82f6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html.dark {
+  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+/* Ensure all sections have proper dark background */
+section {
+  background-color: var(--background) !important;
+}
+
+/* Override common light theme classes */
+.bg-white {
+  background-color: var(--card) !important;
+  color: var(--card-foreground) !important;
+}
+
+.bg-gray-50 {
+  background-color: #1e293b !important;
+}
+
+.bg-gray-100 {
+  background-color: #334155 !important;
+}
+
+/* Text color improvements */
+.text-gray-900 {
+  color: #f1f5f9 !important;
+}
+
+.text-gray-800 {
+  color: #f1f5f9 !important;
+}
+
+.text-gray-700 {
+  color: #cbd5e1 !important;
+}
+
+.text-gray-600 {
+  color: #94a3b8 !important;
+}
+
+.text-gray-500 {
+  color: #64748b !important;
+}
+
+.text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+.text-slate-700 {
+  color: #cbd5e1 !important;
+}
+
+.text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+/* Card and container styling */
+.bg-slate-800 {
+  background-color: var(--card) !important;
+}
+
+/* Border colors */
+.border-gray-200 {
+  border-color: var(--border) !important;
+}
+
+.border-gray-300 {
+  border-color: var(--border) !important;
+}
+
+.border-slate-200 {
+  border-color: var(--border) !important;
+}
+
+/* Button and interactive elements */
+.bg-blue-600 {
+  background-color: var(--primary) !important;
+}
+
+.bg-blue-500 {
+  background-color: var(--primary) !important;
+}
+
+/* Hover states */
+.hover\:bg-gray-50:hover {
+  background-color: #334155 !important;
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: #475569 !important;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 6px;
+  border: 2px solid #1e293b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Firefox scrollbar */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #475569 #1e293b;
 }

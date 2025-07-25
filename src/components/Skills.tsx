@@ -54,14 +54,14 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="py-20 bg-slate-50 dark:bg-slate-900">
+    <section id="skills" className="py-20 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Technical Skills
           </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-blue-500 mx-auto mb-4"></div>
+          <p className="text-lg text-slate-300 max-w-3xl mx-auto">
             Comprehensive expertise across the modern data engineering stack, 
             from infrastructure to analytics and everything in between.
           </p>
@@ -71,15 +71,15 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-slate-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-700 hover:border-slate-600"
             >
               <div className="flex items-center mb-4">
-                <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg mr-4">
-                  <div className="text-blue-600 dark:text-blue-400">
+                <div className="p-3 bg-blue-900/50 rounded-lg mr-4">
+                  <div className="text-blue-400">
                     {category.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-800 dark:text-white">
+                <h3 className="text-xl font-semibold text-white">
                   {category.title}
                 </h3>
               </div>
@@ -88,7 +88,7 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <span 
                     key={skillIndex}
-                    className="inline-block bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 px-3 py-1 rounded-full text-sm mr-2 mb-2 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
+                    className="inline-block bg-slate-700 text-slate-200 px-3 py-1 rounded-full text-sm mr-2 mb-2 hover:bg-blue-900/50 hover:text-blue-300 transition-colors duration-200"
                   >
                     {skill}
                   </span>
@@ -100,7 +100,7 @@ const Skills = () => {
 
         {/* Certifications */}
         <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center text-slate-800 dark:text-white mb-8">
+          <h3 className="text-2xl font-bold text-center text-white mb-8">
             Certifications
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -112,12 +112,12 @@ const Skills = () => {
             ].map((cert, index) => (
               <div 
                 key={index}
-                className="bg-white dark:bg-slate-800 rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow duration-300"
+                className="bg-slate-800 rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow duration-300 border border-slate-700"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-3 flex items-center justify-center">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h4 className="font-semibold text-slate-800 dark:text-white text-sm">
+                <h4 className="font-semibold text-white text-sm">
                   {cert}
                 </h4>
               </div>

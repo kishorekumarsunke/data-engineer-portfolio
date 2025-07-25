@@ -82,14 +82,14 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-slate-50 dark:bg-slate-900">
+    <section id="experience" className="py-20 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Experience & Education
           </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-blue-500 mx-auto mb-4"></div>
+          <p className="text-lg text-slate-300 max-w-3xl mx-auto">
             A progressive career in data engineering with experience across startups 
             and enterprise environments, building scalable data solutions.
           </p>
@@ -97,27 +97,27 @@ const Experience = () => {
 
         {/* Professional Experience */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-8 text-center">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">
             Professional Experience
           </h3>
           
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px h-full w-0.5 bg-blue-600"></div>
+            <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px h-full w-0.5 bg-blue-500"></div>
             
             {experiences.map((exp, index) => (
               <div key={index} className="relative mb-8">
                 {/* Timeline dot */}
-                <div className="absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-slate-900"></div>
+                <div className="absolute left-2 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-slate-900"></div>
                 
                 {/* Content */}
                 <div className={`ml-10 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:ml-1/2 md:pl-8'}`}>
-                  <div className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-lg">
+                  <div className="bg-slate-800 rounded-lg p-6 shadow-lg border border-slate-700">
                     <div className="flex flex-wrap items-center justify-between mb-3">
-                      <h4 className="text-xl font-bold text-slate-800 dark:text-white">
+                      <h4 className="text-xl font-bold text-white">
                         {exp.title}
                       </h4>
-                      <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-full">
+                      <span className="px-3 py-1 bg-blue-900/50 text-blue-300 text-sm rounded-full">
                         {exp.type}
                       </span>
                     </div>
@@ -137,16 +137,16 @@ const Experience = () => {
                       <span>{exp.period}</span>
                     </div>
                     
-                    <p className="text-slate-600 dark:text-slate-300 mb-4">
+                    <p className="text-slate-300 mb-4">
                       {exp.description}
                     </p>
                     
                     <div className="mb-4">
-                      <h5 className="font-semibold text-slate-800 dark:text-white mb-2">Key Achievements:</h5>
+                      <h5 className="font-semibold text-white mb-2">Key Achievements:</h5>
                       <ul className="space-y-1">
                         {exp.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className="flex items-start text-sm text-slate-600 dark:text-slate-300">
-                            <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                          <li key={achIndex} className="flex items-start text-sm text-slate-300">
+                            <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                             {achievement}
                           </li>
                         ))}
@@ -157,7 +157,7 @@ const Experience = () => {
                       {exp.technologies.map((tech, techIndex) => (
                         <span 
                           key={techIndex}
-                          className="px-2 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs rounded"
+                          className="px-2 py-1 bg-slate-700 text-slate-200 text-xs rounded"
                         >
                           {tech}
                         </span>
@@ -172,7 +172,7 @@ const Experience = () => {
 
         {/* Education */}
         <div>
-          <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-8 text-center">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">
             Education
           </h3>
           
@@ -180,28 +180,28 @@ const Experience = () => {
             {education.map((edu, index) => (
               <div 
                 key={index}
-                className="bg-white dark:bg-slate-800 rounded-lg p-6 shadow-lg"
+                className="bg-slate-800 rounded-lg p-6 shadow-lg border border-slate-700"
               >
-                <h4 className="text-xl font-bold text-slate-800 dark:text-white mb-2">
+                <h4 className="text-xl font-bold text-white mb-2">
                   {edu.degree}
                 </h4>
                 
-                <div className="flex items-center text-slate-600 dark:text-slate-300 mb-2">
+                <div className="flex items-center text-slate-300 mb-2">
                   <Building className="w-4 h-4 mr-2" />
                   <span className="font-semibold">{edu.school}</span>
                 </div>
                 
-                <div className="flex items-center text-slate-600 dark:text-slate-300 mb-2">
+                <div className="flex items-center text-slate-300 mb-2">
                   <MapPin className="w-4 h-4 mr-2" />
                   <span>{edu.location}</span>
                 </div>
                 
-                <div className="flex items-center text-slate-600 dark:text-slate-300 mb-4">
+                <div className="flex items-center text-slate-300 mb-4">
                   <Calendar className="w-4 h-4 mr-2" />
                   <span>{edu.period}</span>
                 </div>
                 
-                <p className="text-slate-600 dark:text-slate-300">
+                <p className="text-slate-300">
                   {edu.description}
                 </p>
               </div>

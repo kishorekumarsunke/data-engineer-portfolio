@@ -95,14 +95,14 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-slate-800">
+    <section id="projects" className="py-20 bg-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Featured Projects
           </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          <div className="w-24 h-1 bg-blue-500 mx-auto mb-4"></div>
+          <p className="text-lg text-slate-300 max-w-3xl mx-auto">
             A showcase of data engineering projects demonstrating expertise in building 
             scalable, reliable, and efficient data infrastructure solutions.
           </p>
@@ -112,7 +112,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-slate-50 dark:bg-slate-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-slate-700"
             >
               {/* Project Image Placeholder */}
               <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
@@ -123,27 +123,27 @@ const Projects = () => {
               
               <div className="p-6">
                 <div className="flex items-center mb-3">
-                  <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg mr-3">
-                    <div className="text-blue-600 dark:text-blue-400">
+                  <div className="p-2 bg-blue-900/50 rounded-lg mr-3">
+                    <div className="text-blue-400">
                       {project.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800 dark:text-white">
+                  <h3 className="text-xl font-bold text-white">
                     {project.title}
                   </h3>
                 </div>
                 
-                <p className="text-slate-600 dark:text-slate-300 mb-4">
+                <p className="text-slate-300 mb-4">
                   {project.description}
                 </p>
 
                 {/* Key Features */}
                 <div className="mb-4">
-                  <h4 className="font-semibold text-slate-800 dark:text-white mb-2">Key Features:</h4>
-                  <ul className="text-sm text-slate-600 dark:text-slate-300 space-y-1">
+                  <h4 className="font-semibold text-white mb-2">Key Features:</h4>
+                  <ul className="text-sm text-slate-300 space-y-1">
                     {project.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></div>
+                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>
                         {feature}
                       </li>
                     ))}
@@ -156,7 +156,7 @@ const Projects = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded-full font-medium"
+                        className="px-3 py-1 bg-blue-900/50 text-blue-300 text-xs rounded-full font-medium"
                       >
                         {tech}
                       </span>
@@ -170,7 +170,7 @@ const Projects = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center px-4 py-2 bg-slate-800 dark:bg-slate-700 text-white rounded-lg hover:bg-slate-700 dark:hover:bg-slate-600 transition-colors duration-200"
+                    className="flex items-center px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors duration-200"
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code
