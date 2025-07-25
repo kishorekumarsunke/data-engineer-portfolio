@@ -1,6 +1,27 @@
+'use client'
+
 import { Database, Cloud, Zap, Settings, BarChart, Shield } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
 const Skills = () => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    const section = document.getElementById('skills')
+    if (section) observer.observe(section)
+
+    return () => observer.disconnect()
+  }, [])
+
   const skillCategories = [
     {
       icon: <Database className="w-8 h-8" />,
@@ -71,15 +92,16 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className="bg-slate-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-700 hover:border-slate-600"
+              className={`bg-slate-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-500 border border-slate-700 hover:border-slate-600 group transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} hover:scale-105 hover:-translate-y-2`}
+              style={{ transitionDelay: `${index * 200}ms` }}
             >
               <div className="flex items-center mb-4">
-                <div className="p-3 bg-blue-900/50 rounded-lg mr-4">
-                  <div className="text-blue-400">
+                <div className="p-3 bg-blue-900/50 rounded-lg mr-4 group-hover:bg-blue-800/70 transition-colors duration-300 group-hover:scale-110 transform">
+                  <div className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300 group-hover:rotate-12 transform">
                     {category.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-white group-hover:text-blue-300 transition-colors duration-300">
                   {category.title}
                 </h3>
               </div>
@@ -88,7 +110,11 @@ const Skills = () => {
                 {category.skills.map((skill, skillIndex) => (
                   <span 
                     key={skillIndex}
-                    className="inline-block bg-slate-700 text-slate-200 px-3 py-1 rounded-full text-sm mr-2 mb-2 hover:bg-blue-900/50 hover:text-blue-300 transition-colors duration-200"
+                    className="inline-block bg-slate-700 text-slate-200 px-3 py-1 rounded-full text-sm mr-2 mb-2 hover:bg-blue-900/50 hover:text-blue-300 transition-all duration-300 hover:scale-105 transform cursor-default"
+                    style={{ 
+                      animationDelay: `${(index * 200) + (skillIndex * 50)}ms`,
+                      animation: isVisible ? 'slideInRight 0.5s ease-out forwards' : 'none'
+                    }}
                   >
                     {skill}
                   </span>
@@ -100,7 +126,7 @@ const Skills = () => {
 
         {/* Certifications */}
         <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center text-white mb-8">
+          <h3 className={`text-2xl font-bold text-center text-white mb-8 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             Certifications
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -112,12 +138,13 @@ const Skills = () => {
             ].map((cert, index) => (
               <div 
                 key={index}
-                className="bg-slate-800 rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-shadow duration-300 border border-slate-700"
+                className={`bg-slate-800 rounded-lg p-4 text-center shadow-md hover:shadow-lg transition-all duration-500 border border-slate-700 group transform hover:scale-105 hover:-translate-y-2 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+                style={{ transitionDelay: `${800 + (index * 150)}ms` }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-3 flex items-center justify-center">
-                  <Shield className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-3 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 group-hover:rotate-12">
+                  <Shield className="w-8 h-8 text-white group-hover:animate-pulse" />
                 </div>
-                <h4 className="font-semibold text-white text-sm">
+                <h4 className="font-semibold text-white text-sm group-hover:text-blue-300 transition-colors duration-300">
                   {cert}
                 </h4>
               </div>

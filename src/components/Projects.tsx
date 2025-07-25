@@ -1,6 +1,27 @@
+'use client'
+
 import { ExternalLink, Github, Database, Cloud, Zap } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
 const Projects = () => {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    const section = document.getElementById('projects')
+    if (section) observer.observe(section)
+
+    return () => observer.disconnect()
+  }, [])
+
   const projects = [
     {
       title: "Real-time Analytics Pipeline",
@@ -112,28 +133,31 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-slate-700"
+              className={`bg-slate-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 border border-slate-700 group transform hover:scale-105 hover:-translate-y-2 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
+              style={{ transitionDelay: `${index * 300}ms` }}
             >
               {/* Project Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                <div className="text-white text-6xl">
+              <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center relative overflow-hidden group-hover:from-blue-400 group-hover:to-purple-500 transition-all duration-500">
+                <div className="text-white text-6xl group-hover:scale-110 transition-transform duration-500 group-hover:rotate-12">
                   {project.icon}
                 </div>
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/50 to-transparent"></div>
               </div>
               
               <div className="p-6">
                 <div className="flex items-center mb-3">
-                  <div className="p-2 bg-blue-900/50 rounded-lg mr-3">
-                    <div className="text-blue-400">
+                  <div className="p-2 bg-blue-900/50 rounded-lg mr-3 group-hover:bg-blue-800/70 transition-colors duration-300 group-hover:scale-110 transform">
+                    <div className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
                       {project.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white">
+                  <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
                     {project.title}
                   </h3>
                 </div>
                 
-                <p className="text-slate-300 mb-4">
+                <p className="text-slate-300 mb-4 group-hover:text-slate-200 transition-colors duration-300">
                   {project.description}
                 </p>
 
@@ -142,8 +166,8 @@ const Projects = () => {
                   <h4 className="font-semibold text-white mb-2">Key Features:</h4>
                   <ul className="text-sm text-slate-300 space-y-1">
                     {project.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>
+                      <li key={featureIndex} className="flex items-center group-hover:text-slate-200 transition-colors duration-300">
+                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 group-hover:bg-blue-300 transition-colors duration-300 group-hover:scale-125 transform"></div>
                         {feature}
                       </li>
                     ))}
@@ -156,7 +180,7 @@ const Projects = () => {
                     {project.technologies.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="px-3 py-1 bg-blue-900/50 text-blue-300 text-xs rounded-full font-medium"
+                        className="px-3 py-1 bg-blue-900/50 text-blue-300 text-xs rounded-full font-medium hover:bg-blue-800/70 hover:text-blue-200 transition-all duration-300 hover:scale-105 transform cursor-default"
                       >
                         {tech}
                       </span>
@@ -170,9 +194,9 @@ const Projects = () => {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-colors duration-200"
+                    className="flex items-center px-4 py-2 bg-slate-700 text-white rounded-lg hover:bg-slate-600 transition-all duration-300 hover:scale-105 hover:-translate-y-1 group/button"
                   >
-                    <Github className="w-4 h-4 mr-2" />
+                    <Github className="w-4 h-4 mr-2 group-hover/button:rotate-12 transition-transform duration-300" />
                     Code
                   </a>
                   <a
