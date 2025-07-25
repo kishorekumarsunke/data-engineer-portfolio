@@ -23,85 +23,82 @@ const Experience = () => {
 
     return () => observer.disconnect()
   }, [])
-  const experiences = [
-    {
-      title: "Senior Data Engineer",
-      company: "Tech Corp Inc.",
-      location: "San Francisco, CA",
-      period: "2022 - Present",
-      type: "Full-time",
-      description: "Lead data engineer responsible for designing and implementing enterprise-scale data infrastructure supporting analytics and ML workloads.",
-      achievements: [
-        "Reduced data pipeline execution time by 60% through optimization and parallelization",
-        "Built real-time streaming platform processing 2M+ events per day",
-        "Implemented data quality framework reducing data incidents by 80%",
-        "Mentored junior engineers and established data engineering best practices"
-      ],
-      technologies: ["Apache Spark", "Kafka", "AWS", "Python", "Snowflake", "dbt"]
-    },
-    {
-      title: "Data Engineer",
-      company: "DataFlow Solutions",
-      location: "New York, NY",
-      period: "2020 - 2022",
-      type: "Full-time",
-      description: "Developed and maintained ETL pipelines and data warehouse solutions for e-commerce and financial clients.",
-      achievements: [
-        "Designed dimensional data models for 5+ client data warehouses",
-        "Automated manual data processes saving 20+ hours per week",
-        "Implemented CDC solutions for real-time data synchronization",
-        "Collaborated with data scientists to build ML feature pipelines"
-      ],
-      technologies: ["PostgreSQL", "Apache Airflow", "Docker", "GCP", "BigQuery", "Python"]
-    },
-    {
-      title: "Junior Data Engineer",
-      company: "Analytics Startup",
-      location: "Austin, TX",
-      period: "2019 - 2020",
-      type: "Full-time",
-      description: "Built foundational data infrastructure and analytics capabilities for a fast-growing startup in the fintech space.",
-      achievements: [
-        "Created first data warehouse from scratch using modern cloud technologies",
-        "Built automated reporting system serving 100+ stakeholders",
-        "Implemented data governance practices and documentation standards",
-        "Optimized database queries improving dashboard performance by 40%"
-      ],
-      technologies: ["MySQL", "Python", "AWS S3", "Redshift", "Tableau", "Git"]
-    },
-    {
-      title: "Data Analyst",
-      company: "Business Intelligence Corp",
-      location: "Chicago, IL",
-      period: "2018 - 2019",
-      type: "Full-time",
-      description: "Analyzed business data and created insights to drive strategic decision-making across multiple departments.",
-      achievements: [
-        "Built executive dashboards tracking key business metrics",
-        "Performed statistical analysis identifying revenue optimization opportunities",
-        "Automated monthly reporting processes using Python and SQL",
-        "Collaborated with business stakeholders to define data requirements"
-      ],
-      technologies: ["SQL", "Python", "Excel", "Power BI", "R", "Statistics"]
-    }
-  ]
+const experiences = [
+  {
+    title: "Student Assistant",
+    company: "UTA Office of Information Technology",
+    location: "Arlington, TX",
+    period: "Jan 2025 - Present",
+    type: "Part-time",
+    description: "Provided technical support and software management for campus labs, ensuring system reliability and student success.",
+    achievements: [
+      "Achieved 75% first-call resolution rate for hardware/software issues",
+      "Reduced system downtime by 20% through proactive maintenance",
+      "Enhanced student learning by assisting with Python programming exercises"
+    ],
+    technologies: ["Windows", "macOS", "ServiceNow", "Pharos Printing"]
+  },
+  {
+    title: "Data Engineer Associate",
+    company: "Accenture",
+    location: "Remote (Client: Zoetis)",
+    period: "Oct 2022 - Nov 2023",
+    type: "Full-time",
+    description: "Designed and optimized data ingestion and processing pipelines using Azure Data Factory and Databricks for the Animal Healthcare domain.",
+    achievements: [
+      "Increased data ingestion efficiency by 40% through optimized ADF pipelines",
+      "Reduced data retrieval times by 20% with Azure Data Lake Storage Gen2",
+      "Enhanced data quality by 35% via automated Databricks transforms",
+      "Delivered 50% faster analytics with Azure Synapse query optimization"
+    ],
+    technologies: ["Azure Data Factory", "Azure Databricks", "Data Lake Storage Gen2", "Synapse Analytics", "Power BI"]
+  },
+  {
+    title: "Junior Web Developer",
+    company: "Military College of Electronics and Mechanical Engineering",
+    location: "Hyderabad, India",
+    period: "Apr 2022 - Sep 2022",
+    type: "Volunteer",
+    description: "Built a MERN-stack EdTech platform to digitize educational materials and streamline access.",
+    achievements: [
+      "Migrated 75% of course materials online, reducing printing costs by 40%",
+      "Implemented role-based authentication to secure content",
+      "Optimized front-end performance, improving load times by 30%"
+    ],
+    technologies: ["MongoDB", "Express.js", "React", "Node.js"]
+  },
+  {
+    title: "Quality Assurance Intern",
+    company: "Virtusa",
+    location: "Remote",
+    period: "Jan 2022 - Mar 2022",
+    type: "Internship",
+    description: "Executed functional, regression, and integration testing to ensure software quality and client compliance.",
+    achievements: [
+      "Reduced post-deployment defects by 30% through rigorous test protocols",
+      "Collaborated across teams to resolve critical bugs before release",
+      "Improved testing efficiency by automating key regression suites"
+    ],
+    technologies: ["Selenium", "Postman", "JIRA", "TestRail"]
+  }
+]
 
   const education = [
-    {
-      degree: "Master of Science in Data Science",
-      school: "University of Technology",
-      location: "Boston, MA",
-      period: "2016 - 2018",
-      description: "Specialized in big data analytics, machine learning, and statistical modeling."
-    },
-    {
-      degree: "Bachelor of Science in Computer Science",
-      school: "State University",
-      location: "Austin, TX",
-      period: "2012 - 2016",
-      description: "Focus on algorithms, data structures, and software engineering principles."
-    }
-  ]
+  {
+    degree: "Master of Science in Computer Science",
+    school: "The University of Texas at Arlington",
+    location: "Arlington, TX",
+    period: "Jan 2024 - Dec 2025",
+    description: "Focused on scalable systems, data engineering, and advanced algorithms."
+  },
+  {
+    degree: "Bachelor of Technology in Computer Science",
+    school: "Vidya Jyothi Institute of Technology",
+    location: "Hyderabad, India",
+    period: "Aug 2018 - Jul 2022",
+    description: "Specialized in software engineering principles, data structures, and database systems."
+  }
+]
 
   return (
     <section id="experience" className="py-20 bg-slate-900">

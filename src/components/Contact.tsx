@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter,Instagram  } from 'lucide-react'
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -44,47 +44,47 @@ const Contact = () => {
     alert('Thank you for your message! I\'ll get back to you soon.')
   }
 
-  const contactInfo = [
-    {
-      icon: <Mail className="w-6 h-6" />,
-      label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com"
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      label: "Location",
-      value: "San Francisco, CA",
-      href: "#"
-    }
-  ]
+ const contactInfo = [
+  {
+    icon: <Mail className="w-6 h-6" />,
+    label: "Email",
+    value: "kxs0089@mavs.uta.edu",
+    href: "mailto:kxs0089@mavs.uta.edu"
+  },
+  {
+    icon: <Phone className="w-6 h-6" />,
+    label: "Phone",
+    value: "(682) 406-7054",
+    href: "tel:+16824067054"
+  },
+  {
+    icon: <MapPin className="w-6 h-6" />,
+    label: "Location",
+    value: "Arlington, TX",
+    href: "#"
+  }
+]
 
-  const socialLinks = [
-    {
-      icon: <Github className="w-6 h-6" />,
-      label: "GitHub",
-      href: "https://github.com",
-      color: "hover:text-gray-900 dark:hover:text-gray-100"
+const socialLinks = [
+  {
+    icon: <Github className="w-6 h-6" />,
+    label: "GitHub",
+    href: "https://github.com/kishorekumarsunke",
+    color: "hover:text-gray-900 dark:hover:text-gray-100"
+  },
+  {
+    icon: <Linkedin className="w-6 h-6" />,
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/sunke-kishore-kumar",
+    color: "hover:text-blue-600"
+  },
+  {
+      icon: <Instagram className="w-6 h-6" />,
+      label: "Instagram",
+      href: "https://instagram.com/kishore_12_12",
+      color: "hover:text-pink-500"
     },
-    {
-      icon: <Linkedin className="w-6 h-6" />,
-      label: "LinkedIn",
-      href: "https://linkedin.com",
-      color: "hover:text-blue-600"
-    },
-    {
-      icon: <Twitter className="w-6 h-6" />,
-      label: "Twitter",
-      href: "https://twitter.com",
-      color: "hover:text-blue-400"
-    }
-  ]
+]
 
   return (
     <section id="contact" className="py-20 bg-slate-900">
