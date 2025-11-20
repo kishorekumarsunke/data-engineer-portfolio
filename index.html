@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of a Data Engineer specializing in ETL, Data Warehousing, and Cloud Platforms.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/workflow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Data<span class="accent">Dev</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="accent">Alex Data</span></h1>
+                <h2>Building Robust Data Pipelines</h2>
+                <p>I transform complex data into actionable insights. Specialized in Cloud Data Warehousing, ETL/ELT,
+                    and Big Data Technologies.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Placeholder for headshot -->
+                <div class="placeholder-img">
+                    <i class="fas fa-database fa-5x"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Animation Section -->
+    <section id="workflow" class="section">
+        <div class="container">
+            <h2 class="section-title">Data Engineering Workflow</h2>
+            <div class="workflow-container">
+                <svg class="workflow-svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feGaussianBlur stdDeviation="5" result="blur" />
+                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        </filter>
+                    </defs>
+
+                    <!-- Connecting Paths -->
+                    <!-- Linear Flow -->
+                    <path id="path-source-ingest" class="connection-path" d="M 170 300 L 230 300" />
+                    <path id="path-ingest-lake" class="connection-path" d="M 350 300 L 410 300" />
+                    <path id="path-lake-transform" class="connection-path" d="M 530 300 L 590 300" />
+                    <path id="path-transform-warehouse" class="connection-path" d="M 710 300 L 770 300" />
+
+                    <!-- Branching -->
+                    <path id="path-warehouse-ml" class="connection-path" d="M 890 300 C 920 300, 920 150, 950 150" />
+                    <path id="path-warehouse-bi" class="connection-path" d="M 890 300 C 920 300, 920 450, 950 450" />
+
+                    <!-- Nodes (Cards) -->
+
+                    <!-- 1. Sources -->
+                    <g class="workflow-card" transform="translate(50, 240)" data-id="source">
+                        <rect class="card-bg" width="120" height="120" rx="12" />
+                        <text class="card-icon" x="60" y="50" font-family="FontAwesome" font-size="24"
+                            text-anchor="middle">&#xf1c0;</text>
+                        <text class="card-title" x="60" y="80" text-anchor="middle">Sources</text>
+                        <text class="card-status" x="60" y="100" text-anchor="middle">ACTIVE</text>
+                    </g>
+
+                    <!-- 2. Ingestion -->
+                    <g class="workflow-card" transform="translate(230, 240)" data-id="ingest">
+                        <rect class="card-bg" width="120" height="120" rx="12" />
+                        <text class="card-icon" x="60" y="50" font-family="FontAwesome" font-size="24"
+                            text-anchor="middle">&#xf0b0;</text>
+                        <text class="card-title" x="60" y="80" text-anchor="middle">Ingestion</text>
+                        <text class="card-status" x="60" y="100" text-anchor="middle">STREAMING</text>
+                    </g>
+
+                    <!-- 3. Data Lake -->
+                    <g class="workflow-card" transform="translate(410, 240)" data-id="lake">
+                        <rect class="card-bg" width="120" height="120" rx="12" />
+                        <text class="card-icon" x="60" y="50" font-family="FontAwesome" font-size="28"
+                            text-anchor="middle">&#xf0c2;</text>
+                        <text class="card-title" x="60" y="80" text-anchor="middle">Data Lake</text>
+                        <text class="card-status" x="60" y="100" text-anchor="middle">STORING</text>
+                    </g>
+
+                    <!-- 4. Transform -->
+                    <g class="workflow-card" transform="translate(590, 240)" data-id="transform">
+                        <rect class="card-bg" width="120" height="120" rx="12" />
+                        <text class="card-icon spin" x="60" y="50" font-family="FontAwesome" font-size="24"
+                            text-anchor="middle">&#xf085;</text>
+                        <text class="card-title" x="60" y="80" text-anchor="middle">Transform</text>
+                        <text class="card-status" x="60" y="100" text-anchor="middle">PROCESSING</text>
+                    </g>
+
+                    <!-- 5. Warehouse -->
+                    <g class="workflow-card" transform="translate(770, 240)" data-id="warehouse">
+                        <rect class="card-bg" width="120" height="120" rx="12" />
+                        <text class="card-icon" x="60" y="50" font-family="FontAwesome" font-size="28"
+                            text-anchor="middle">&#xf1c0;</text>
+                        <text class="card-title" x="60" y="80" text-anchor="middle">Warehouse</text>
+                        <text class="card-status" x="60" y="100" text-anchor="middle">READY</text>
+                    </g>
+
+                    <!-- 6. ML Models (Top Branch) -->
+                    <g class="workflow-group" transform="translate(950, 90)">
+                        <!-- Governance Badge -->
+                        <g class="badge" transform="translate(10, -25)">
+                            <rect width="100" height="24" rx="12" fill="rgba(56, 189, 248, 0.1)"
+                                stroke="var(--primary-color)" stroke-dasharray="4 2" />
+                            <text x="50" y="16" text-anchor="middle" fill="var(--primary-color)" font-size="10"
+                                font-weight="600">
+                                <tspan font-family="FontAwesome">&#xf132;</tspan> Governance
+                            </text>
+                        </g>
+                        <!-- Card -->
+                        <g class="workflow-card" data-id="ml_train">
+                            <rect class="card-bg" width="120" height="120" rx="12" />
+                            <text class="card-icon" x="60" y="50" font-family="FontAwesome" font-size="24"
+                                text-anchor="middle">&#xf1e0;</text>
+                            <text class="card-title" x="60" y="80" text-anchor="middle">ML Models</text>
+                            <text class="card-status" x="60" y="100" text-anchor="middle">TRAINING</text>
+                        </g>
+                    </g>
+
+                    <!-- 7. BI & Analytics (Bottom Branch) -->
+                    <g class="workflow-group" transform="translate(950, 390)">
+                        <!-- Card -->
+                        <g class="workflow-card" data-id="bi">
+                            <rect class="card-bg" width="120" height="120" rx="12" />
+                            <text class="card-icon" x="60" y="50" font-family="FontAwesome" font-size="24"
+                                text-anchor="middle">&#xf080;</text>
+                            <text class="card-title" x="60" y="80" text-anchor="middle">BI & Analytics</text>
+                            <text class="card-status" x="60" y="100" text-anchor="middle">LIVE</text>
+                        </g>
+                        <!-- Monitoring Badge -->
+                        <g class="badge" transform="translate(10, 125)">
+                            <rect width="100" height="24" rx="12" fill="rgba(56, 189, 248, 0.1)"
+                                stroke="var(--primary-color)" stroke-dasharray="4 2" />
+                            <text x="50" y="16" text-anchor="middle" fill="var(--primary-color)" font-size="10"
+                                font-weight="600">
+                                <tspan font-family="FontAwesome">&#xf201;</tspan> Monitoring
+                            </text>
+                        </g>
+                    </g>
+
+                </svg>
+
+                <div class="workflow-details">
+                    <h3>Stage Title</h3>
+                    <p>Description of the stage goes here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a passionate Data Engineer with a strong background in computer science and analytics. My
+                        journey began with a fascination for how data drives decision-making in modern businesses.</p>
+                    <p>With expertise in <strong>Python, SQL, and Cloud Platforms</strong>, I build scalable data
+                        architectures that handle massive datasets efficiently. I enjoy solving complex data challenges
+                        and optimizing pipelines for performance and reliability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>Scala</span>
+                        <span>Bash Scripting</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Frameworks</h3>
+                    <div class="tags">
+                        <span>Apache Spark</span>
+                        <span>Apache Airflow</span>
+                        <span>Kafka</span>
+                        <span>Docker</span>
+                        <span>Terraform</span>
+                        <span>dbt</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="tags">
+                        <span>PostgreSQL</span>
+                        <span>Snowflake</span>
+                        <span>MongoDB</span>
+                        <span>Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> Cloud Services</h3>
+                    <div class="tags">
+                        <span>AWS (S3, Glue, Redshift)</span>
+                        <span>GCP (BigQuery, Dataflow)</span>
+                        <span>Azure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Real-time Data Streaming Pipeline</h3>
+                        <p>Designed and implemented a real-time data ingestion pipeline using Kafka and Spark Streaming
+                            to process IoT sensor data.</p>
+                        <div class="tech-stack">
+                            <span>Kafka</span>
+                            <span>Spark</span>
+                            <span>AWS S3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Data Warehouse Migration</h3>
+                        <p>Led the migration of an on-premise legacy database to Snowflake, improving query performance
+                            by 40% and reducing costs.</p>
+                        <div class="tech-stack">
+                            <span>Snowflake</span>
+                            <span>dbt</span>
+                            <span>Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Automated ETL Workflow</h3>
+                        <p>Orchestrated complex ETL workflows using Apache Airflow to aggregate daily sales data from
+                            multiple sources into a central warehouse.</p>
+                        <div class="tech-stack">
+                            <span>Airflow</span>
+                            <span>PostgreSQL</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-darker">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Senior Data Engineer</h3>
+                        <h4>Tech Corp Inc.</h4>
+                        <ul>
+                            <li>Architected a serverless data lake on AWS.</li>
+                            <li>Mentored junior engineers and established coding standards.</li>
+                            <li>Optimized data processing costs by 25%.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2021 - 2023</div>
+                    <div class="timeline-content">
+                        <h3>Data Engineer</h3>
+                        <h4>Data Solutions Ltd.</h4>
+                        <ul>
+                            <li>Built and maintained ETL pipelines using Python and SQL.</li>
+                            <li>Collaborated with data scientists to deploy ML models.</li>
+                            <li>Ensured data quality and integrity across systems.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <p>Interested in working together? Feel free to reach out!</p>
+                    <a href="mailto:hello@alexdata.com" class="contact-link"><i class="fas fa-envelope"></i>
+                        hello@alexdata.com</a>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Alex Data. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/workflow.js"></script>
+</body>
+
+</html>
